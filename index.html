@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://nightly.datatables.net/js/jquery.dataTables.js"></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="./css/estilos.css">
+
+    <title>Clima</title>
+
+
+</head>
+
+<body onload="onLoad()">
+
+    <header id="idHeader"></header>
+
+    <div id="loader" class="loader">Cargando...</div>
+
+    <div id="container" class="container">
+        <div class="container-fluid">
+            
+            <div class="card  w-100 fondoCard" id="section1">
+                <div class="card-header">
+                    <p class="ubicacion"></p>
+                </div>
+                
+                <div class="card-body ">
+                    <div class="form-group">
+                        <div class="estiloTemperatura">
+                            <img id="bloqueHoy" />
+                            <span id="temperature"></span><span> ºC</span>
+                        </div>
+                        <div id="description"></div>
+                    </div>
+                </div>
+
+            </div>
+
+       
+
+            <div class="card  w-100 " id="section2">
+                <div class="card-header">
+                    <span>Pronóstico de hoy para </span><span class="ubicacion"></span>
+                </div>
+                
+                <div class="card-body ">
+                    <span>Sensación térmica </span>
+                    <div class="estiloTemperatura">
+                        <!-- <img id="bloqueHoy" /> -->
+                        <span id="sensacion"></span><span> ºC</span>
+                    </div>
+
+                    <div class="container">
+                        <div class="col form-group col-sm-6">
+                            <div class="form-group row ">
+                                <label for="" class="col-sm-4 col-form-label text-gray">Máx./Min.</label>
+                                <label for="" class="col-sm-8 col-form-label text-gray" id="maximos"></label>
+                               
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-gray">Humedad</label>
+                                <label for="" class="col-sm-8 col-form-label text-gray" id="humedad"></label>
+                            </div>                    
+                        </div>
+                    
+                    
+                        <div class="col form-group col-sm-6">
+                            <div class="form-group row ">
+                                <label for="" class="col-sm-4 col-form-label text-gray">Viento</label>
+                                <label for="" class="col-sm-6 col-form-label text-gray" id="viento"></label>
+                               
+                            </div>
+                            <div class="form-group row ">
+                                <label for="" class="col-sm-4 col-form-label ">Presión</label>
+                                <label for="" class="col-sm-6 col-form-label " id="presion"></label>
+                            </div>                                                    
+                    
+                        </div>
+                    
+                    
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div class="card  w-100 " id="section3">
+                <div class="card-header">
+                    <span id="">Pronóstico diario</span>
+                </div>
+                
+                <div class="card-body ">
+                    <div class="container text-center">
+                        <div class="row align-items-center">
+                          <div class="col" id="dia1">
+                            One of three columns
+                          </div>
+                          <div class="col" id="dia2">
+                            One of three columns
+                          </div>
+                          <div class="col" id="dia3">
+                            One of three columns
+                          </div>
+                          <div class="col" id="dia4">
+                            One of three columns
+                          </div>
+                          <div class="col" id="dia5">
+                            One of three columns
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+
+            <div class="card  w-100 " id="section4">
+                <div class="card-header">
+                    <span id="">Pronóstico cada 3 horas</span>
+                </div>
+                
+                <div class="card-body ">
+                    <table id="tablaPorHora">
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="card  w-100 " id="section5">
+                <div class="card-header">
+                    <span id="">Calidad del aire</span>
+                </div>
+                
+                <div class="card-body ">
+                    <div class="estiloTemperatura">
+                        <img id="bloqueHoy" />
+                        <span id="temperature"></span><span> ºC</span>
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <script src="./js/scripts.js"></script>
+
+
+</body>
+
+
+</html>
