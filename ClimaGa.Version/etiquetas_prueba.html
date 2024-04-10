@@ -1,0 +1,67 @@
+Aquí tienes un ejemplo básico de una página web que solicita la ubicación del usuario y muestra el clima utilizando HTML, CSS y JavaScript. En este ejemplo, se utiliza la API de OpenWeatherMap para obtener datos meteorológicos basados en la ubicación del usuario.
+
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obtener Clima</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #weather {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Aplicación del Clima</h1>
+</header>
+
+<main>
+    <button onclick="getLocation()">Obtener Clima</button>
+    <div id="weather"></div>
+</main>
+
+<footer>
+    <p>Desarrollado por [Tu nombre]</p>
+</footer>
+
+<script>
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showWeather);
+        } else {
+            alert("Geolocalización no es soportada por este navegador.");
+        }
+    }
+
+    function showWeather(position) {
+        const latitude = position.coords.latitude;
+        const longitude = position.coords.longitude;
+        const apiKey = 'TU_API_KEY'; // Reemplaza 'TU_API_KEY' con tu API key de OpenWeatherMap
+
+        fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`)
+            .then(response => response.json())
+            .then(data => {
+                const weatherElement = document.getElementById('weather');
+                const temperature = data.main.temp;
+                const description = data.weather[0].description;
+                weatherElement.innerHTML = `El clima es ${description} con una temperatura de ${temperature}°C`;
+            })
+            .catch(error => {
+                console.error('Error al obtener datos del clima:', error);
+            });
+    }
+</script>
+
+</body>
+</html>
+```
+
+//*Este código utiliza la API `navigator.geolocation` para obtener las coordenadas de ubicación del usuario y luego utiliza la API de OpenWeatherMap para obtener datos meteorológicos basados en esas coordenadas. Los datos meteorológicos se muestran en la página web después de que el usuario hace clic en el botón "Obtener Clima". Asegúrate de reemplazar `'TU_API_KEY'` con tu propia API key de OpenWeatherMap para que funcione correctamente.*//
