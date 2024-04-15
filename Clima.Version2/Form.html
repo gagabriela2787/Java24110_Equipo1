@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./cssGa/estilo.css">
+
+    <title>Formulario</title>
+</head>
+<body>
+     
+    
+      <h1>Formulario de Suscripción</h1>
+      
+      <form action="procesar_formulario.php" method="POST">
+          <label for="nombre">Nombre:</label><br>
+          <input type="text" id="nombre" name="nombre" required><br>
+          
+          <label for="apellido">Apellido:</label><br>
+          <input type="text" id="apellido" name="apellido" required><br>
+          
+          <label for="ciudad">Ciudad/Localidad:</label><br>
+          <input type="text" id="ciudad" name="ciudad" required><br>
+          
+          <label for="provincia">Provincia:</label><br>
+          <input type="text" id="provincia" name="provincia" required><br>
+          
+          <label for="mail">Correo electrónico:</label><br>
+          <input type="email" id="mail" name="mail" required><br>
+          
+          <label for="comentarios">Comentarios:</label><br>
+          <textarea id="comentarios" name="comentarios"></textarea><br>
+          
+          <button type="submit">Enviar</button>
+      </form>
+
+      <a href="indexga.html">Volver al Inicio</a>
+      
+      <footer> Copy right - 
+        <a href="/Nosotros.html">quienes somos</a> - 
+        <a href="/Form.html">Suscribite</a></footer>
+
+</body>
+</html>

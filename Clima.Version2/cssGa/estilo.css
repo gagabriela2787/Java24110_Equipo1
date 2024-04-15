@@ -1,0 +1,258 @@
+/* Fuente de Google fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap'); */
+
+:root{
+    --font-family: 'Roboto', sans-serif;
+    
+    /* --light-color: #f0f8ff;
+    --light-color-alt: #c9c4b6;
+    --primary-background-color: #2a4757;
+    --secondary-background-color: #325569;
+    --hover-light-color: var(--light-color);
+    --hover-dark-color: var(--primary-background-color);
+    --gradient-color: linear-gradient(
+        115deg,#f1ef72,#fed83f,#a767e5,#12bcfe,#009e60);
+    --transparent-light-color: rgba(255,255,255,.05);
+    --transparent-dark-color: rgba(0, 0, 0, 0.75);
+    
+    --font-size-xsm: 1.2rem;
+    --font-size-sm: 1.6rem;
+    --font-size-md: 2.4rem;
+    --font-size-lg: 3rem;
+    --font-size-xl: 4rem;
+    --gap: 2rem;
+    --margin-sm: 2rem;
+    --margin-md: 3rem;
+    --item-min-height-sm: 20rem;
+    --item-min-height-md: 30rem; */
+}
+
+*{
+    margin: 0;
+    padding: 0;    
+    font-weight: bold;
+}
+
+body {
+    /* margin: 0; */
+    background-color: #333;
+    font-family: sans-serif;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .toggle-menu {
+    position: absolute;
+    top: 0.5rem;
+    right: 1.5rem;
+    cursor: pointer;
+    filter: invert(1);
+    width: 40px;
+    z-index: 1;
+  }
+    
+  .main-menu {
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(8, 61, 86);
+    transition: transform 0.3s;
+    transform: translateY(-100%);
+  }
+  
+  .main-menu--show {
+    transform: translateY(0);
+  }
+  
+  .toggle-menu__checkbox {
+    display: none;
+  }
+  
+  .toggle-menu__checkbox:checked + .main-menu {
+    transform: translateY(0);
+  } 
+  
+  .main-menu__item {
+    padding: 1em;
+  }
+  
+  .main-menu__link {
+    color: white;
+    /* text-transform: uppercase; */
+    text-decoration: none;
+  }
+  
+  .container {
+    /* background-color: #DDC9B4; */
+    padding: 20px;
+    color: #2A3D45;
+    display: flex;
+    /* display: none; */
+}
+
+.container > .block {
+    padding: 20px;
+}
+
+.block:first-child {
+ background-color: #2A3D45;
+ color: #DDC9B4;
+}
+
+.information-container {
+    display: flex;
+}
+
+.information {
+    margin-left: 5px;
+}
+
+#location {
+    font-weight: bold;
+    font-size: 40px;  
+}
+
+
+
+.estiloTemperatura{
+    font-weight: bold;
+    font-size: 100px;  
+    
+}
+
+.fondoCard {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:url('../images/fondo_celeste.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: white;
+    /* opacity: 0.3; */
+    /* z-index: 1; */
+  }
+
+  .card{
+    margin: 20px;
+  }
+
+  #bloqueHoy{
+    margin: 10px;
+    
+    z-index: 999; 
+    overflow: hidden; 
+    margin-left: 1px; 
+    margin-top: 1px; 
+    background-position:center; 
+    width: 30%; 
+    height: 370px; 
+    cursor: default; 
+    background-repeat: no-repeat; 
+    background-image: url(''); 
+    top: 0px; 
+    left: 0px;
+    display:inline-block;
+                    
+  }
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #DDC9B4;
+  font-size: 11px;
+  text-indent: -99999em;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #2A3D45;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #2A3D45;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+  @media screen and (min-width: 768px) {
+    .main-menu {
+        flex-direction: row;
+        transform: translateY(0);
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+  }
+
+  footer {
+    text-align: center;
+    padding: 20px 0; 
+  }
+  
+  
+  .footer-nav, .footer-copyright {
+    margin-bottom: 10px; /* Añade un espacio entre los elementos */
+  }
+  .footer-copyright { background-color: #DDC9B4;
+
+  }

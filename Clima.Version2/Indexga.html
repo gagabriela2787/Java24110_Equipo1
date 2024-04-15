@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./cssGa/estilo.css">
+    <link rel="icon" href="/images/calentamiento-global.png">
+    <title>Datos del Clima</title>
+</head>
+<body class="body-index" onload="onLoad()">
+
+    <header id="idHeader">CaCClima</header>  <!-- unif de mirta y ga-->
+    <!--<nav> 
+        
+        <a href="/indexga.html">Hoy</a> 
+        <a href="/porDia.html">Semana</a> 
+        <a href="/calidadAire.html">Calidad del Aire</a> 
+        <a href="/Nosotros.html">Quienes somos</a>
+     
+    </nav>   -->
+   
+    <div id="loader" class="loader">Cargando...</div>
+
+    <div id="container" class="container">
+        <div class="container-fluid">
+            
+            <div class="card  w-100 fondoCard" id="section1">
+                <div class="card-header">
+                    <p class="ubicacion"></p>
+                </div>
+                
+                <div class="card-body ">
+                    <div class="form-group">
+                        <div class="estiloTemperatura">
+                            <img id="bloqueHoy" />
+                            <span id="temperature"></span><span> ºC</span>
+                        </div>
+                        <div id="description"></div>
+                    </div>
+                </div>
+
+            </div>
+
+       
+
+            <div class="card  w-100 " id="section2">
+                <div class="card-header">
+                    <span>Pronóstico de hoy para </span><span class="ubicacion"></span>
+                </div>
+                
+                <div class="card-body ">
+                    <span>Sensación térmica </span>
+                    <div class="estiloTemperatura">
+                        <!-- <img id="bloqueHoy" /> -->
+                        <span id="sensacion"></span><span> ºC</span>
+                    </div>
+
+                    <div class="container">
+                        <div class="col form-group col-sm-6">
+                            <div class="form-group row ">
+                                <label for="" class="col-sm-4 col-form-label text-gray">Máx./Min.</label>
+                                <label for="" class="col-sm-8 col-form-label text-gray" id="maximos"></label>
+                               
+                            </div>
+                            <div class="form-group row">
+                                <label for="" class="col-sm-4 col-form-label text-gray">Humedad</label>
+                                <label for="" class="col-sm-8 col-form-label text-gray" id="humedad"></label>
+                            </div>                    
+                        </div>
+                    
+                    
+                        <div class="col form-group col-sm-6">
+                            <div class="form-group row ">
+                                <label for="" class="col-sm-4 col-form-label text-gray">Viento</label>
+                                <label for="" class="col-sm-6 col-form-label text-gray" id="viento"></label>
+                               
+                            </div>
+                            <div class="form-group row ">
+                                <label for="" class="col-sm-4 col-form-label ">Presión</label>
+                                <label for="" class="col-sm-6 col-form-label " id="presion"></label>
+                            </div>                                                    
+                    
+                        </div>
+                    
+                    
+                    </div>
+
+                </div>
+
+            </div>
+            
+            <div class="card  w-100 " id="section3">
+                <div class="card-header">
+                    <span id="">Pronóstico diario</span>
+                </div>
+                
+                <div class="card-body ">
+                    <div class="container text-center">
+                        <div class="row align-items-center">
+                          <div class="col" id="dia1">
+                            One of three columns
+                          </div>
+                          <div class="col" id="dia2">
+                            One of three columns
+                          </div>
+                          <div class="col" id="dia3">
+                            One of three columns
+                          </div>
+                          <div class="col" id="dia4">
+                            One of three columns
+                          </div>
+                          <div class="col" id="dia5">
+                            One of three columns
+                          </div>
+                        </div>
+                      </div>
+                </div>
+
+            </div>
+
+            <div class="card  w-100 " id="section4">
+                <div class="card-header">
+                    <span id="">Pronóstico cada 3 horas</span>
+                </div>
+                
+                <div class="card-body ">
+                    <table id="tablaPorHora">
+                        <tbody id="tbody">
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+
+            <div class="card  w-100 " id="section5">
+                <div class="card-header">
+                    <span id="">Calidad del aire</span>
+                </div>
+                
+                <div class="card-body ">
+                    <div class="estiloTemperatura">
+                        <img id="bloqueHoy" />
+                        <span id="temperature"></span><span> ºC</span>
+                    </div>
+                </div>
+
+            </div>
+
+            
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-nav">
+            <a href="indexga.html">Volver al Inicio</a>
+            <a href="/Nosotros.html">Quiénes somos</a>
+            <a href="/Form.html">Suscríbete</a>
+        </div>
+        <div class="footer-copyright">
+            <span>&copy;</span> 2024 - Todos los derechos reservados
+        </div>
+    </footer>
+    
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
