@@ -247,13 +247,17 @@ body {
   footer {
     text-align: center;
     padding: 20px 0; 
+    text-decoration: underline
   }
   
   
   .footer-nav, .footer-copyright {
     margin-bottom: 10px; 
   }
-  .footer-copyright { background-color: #DDC9B4;
+  .footer-copyright {
+     background-color: #DDC9B4;
+     display: inline-block;
+
 
   }
 
@@ -287,3 +291,20 @@ body {
     background-size: contain;
 
   }
+
+  .codigo-h2 h2,
+header h2 {
+    color: #8d6cab;
+    font-family: Arial, sans-serif;
+    font-size: 24px; /* Ajusta el tamaño del encabezado según tu preferencia */
+}
+
+.separador {
+    margin-bottom: 20px; /* Puedes ajustar la cantidad de margen según tus preferencias */
+}
+
+.nosotros-body  {
+  /* margin: 0; */
+  background-color: #caccce;
+  font-family: sans-serif;
+}
